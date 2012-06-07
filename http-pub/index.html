@@ -1,0 +1,529 @@
+<html>
+<head>
+  <title>browserling - interactive cross-browser testing</title>
+  <link rel="stylesheet" href="/css/webapp.css">
+  <script type="text/javascript" src="https://js.stripe.com/v1/"></script>
+  <script src="/js/jquery.js"></script>
+  <script src="/bundle/webapp.js"></script>
+  <script>
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-19793659-1']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+</head>
+<body>
+
+<div id="account-bar">
+  <div class="authbar">
+    <span class="email"></span>
+    [ <a class="sign-out-link" href="#">sign out</a> ]
+    [ <a class="account-link" href="#/account">account</a> ]
+    <div class="error"></div>
+  </div>
+  
+  <div class="links">
+    <a id="create-link" href="#/create">create account</a>
+    <a id="sign-in-link" href="#/sign-in">sign in</a>
+  </div>
+  
+  <form id="create">
+    <div class="close">x</div>
+    
+    <div>email</div>
+    <div><input type="text" name="email"></div>
+    <div>password</div>
+    <div><input type="password" name="password"></div>
+    <div>confirm password</div>
+    <div><input type="password" name="confirm"></div>
+    <div><input type="submit" value="create account"></div>
+    
+    <div class="error"></div>
+  </form>
+  
+  <form id="sign-in">
+    <div class="close">x</div>
+    <div>email</div>
+    <div><input type="text" name="email"></div>
+    <div>
+      password
+    </div>
+    <div><input type="password" name="password"></div>
+    <div><input type="submit" value="sign in"></div>
+    <div>
+      <span class="forget">
+        <a href="#">I can't remember my password!</a>
+      </span>
+    </div>
+    
+    <div class="error"></div>
+    <div class="notify"></div>
+  </form>
+  
+  <div id="account-error" class="error"></div>
+</div>
+
+<a name="top"></a>
+<div id="top">
+<a href="#/index"><img src="/images/logo.png"></a>
+  <div class="hook">
+  interactive cross-browser testing
+  </div>
+</div>
+
+<div class="content" id="index">
+  <form class="browser-form">
+    <input name="uri" type="text" value="http://" class="uri">
+    <input name="browser" type="hidden" value="firefox">
+    <input name="version" type="hidden" value="9.0">
+    
+    <div class="browsers">
+      <div class="browser">
+        <input type="button" class="explorer" value="">
+      </div>
+      <div class="browser">
+        <input type="button" class="chrome" value="">
+      </div>
+      <div class="browser active">
+        <input type="button" class="firefox" value="">
+      </div>
+      <div class="browser">
+        <input type="button" class="safari" value="">
+      </div>
+      <div class="browser">
+        <input type="button" class="opera" value="">
+      </div>
+    </div>
+    
+    <div class="versions"></div>
+    
+    <div class="run-bar">
+      <input class="run" type="submit" value="">
+    </div>
+  </form>
+
+  <div id="browser-error" class="error"></div>
+
+  <div class="topic">
+    <img class="left" src="/images/newsite/sofa.png">
+    <ul>
+      <li>We run the browsers on our servers.</li>
+      <li>Fully interactive sessions, not static screenshots.</li>
+      <li>No flash, no applets, nothing to install.
+        Powered entirely by &lt;canvas&gt; and javascript.</li>
+    </ul>
+  </div>
+  
+  <div class="topic">
+    <img class="right" src="/images/newsite/tunnels.png">
+    <ul>
+      <li>Reverse-proxy your localhost into browserling with our ssh tunnels!</li>
+      <li>Just copy and paste an ssh one-liner from the UI.</li>
+    </ul>
+  </div>
+  
+  <div class="topic">
+    <img class="left" src="/images/newsite/testling.png">
+    <div>
+      Looking for automated browser testing?
+      Check out <a href="http://testling.com/">testling</a>.
+      Run javascript tests in all our browsers over a simple HTTP API.
+    </div>
+  </div>
+</div>
+
+<div class="content" id="account">
+  <h1>account</h1>
+  <div class="body">
+    <div class="tabs">
+      <a href="#/account/info" class="active">info</a>
+      <a href="#/account/testling">testling</a>
+      <a href="#/account/password">password</a>
+    </div>
+    
+    <div id="account-info" class="form active">
+      <div class="segment">
+        <img class="plan">
+        
+        <div>
+          You have the <span class="plan">___</span> plan.
+        </div>
+        
+        <div>
+          You have used <span class="minutes">---</span> browserling minutes
+          this month.
+        </div>
+        
+        <div>
+          You have used
+          <span class="testling-used">---</span>
+          out of
+          <span class="testling-limit">---</span>
+          <a href="http://testling.com">testling</a>
+          minutes this month.
+        </div>
+      
+      </div>
+    </div>
+    
+    <form id="account-testling" class="form">
+      You have the <span class="plan">___</span> plan.
+      
+    </form>
+    
+    <form id="account-password" class="form" method="post">
+      <div class="title">change your password</div>
+      
+      <div>
+        current password
+      </div>
+      <div>
+        <input type="password" name="current">
+      </div>
+      
+      <div>
+        new password
+        <div class="verify"></div>
+      </div>
+      <div>
+        <input type="password" name="password">
+      </div>
+      
+      <div>
+        confirm new password
+        <div class="verify"></div>
+      </div>
+      <div>
+        <input type="password" name="confirm">
+      </div>
+      
+      <div>
+        <input type="submit" value="change password">
+      </div>
+      
+      <div class="error"></div>
+      <div class="success">
+        Password updated.
+      </div>
+    </form>
+  </div>
+</div>
+
+<div class="content" id="about">
+  <h1>about us</h1>
+  <div class="meet">
+  Meet the browserling team.
+  </div>
+  
+  <div class="body">
+    <div class="hacker" id="krumins">
+      <div class="portrait">
+        <img src="/images/newsite/krumins.png">
+      </div>
+      <div class="title">Peteris Krumins</div>
+      <div>
+        [<a href="mailto:peteris@browserling.com">email</a>]
+        [<a href="http://catonmat.net">website</a>]
+        [<a href="https://github.com/pkrumins">github</a>]
+        [<a href="https://twitter.com/#!/pkrumins">twitter</a>]
+      </div>
+    </div>
+    
+    <div class="hacker" id="halliday">
+      <div class="portrait">
+        <img src="/images/newsite/halliday.png">
+      </div>
+      <div class="title">
+        James Halliday
+      </div>
+      
+      <div>
+        [<a href="mailto:substack@browserling.com">email</a>]
+        [<a href="http://substack.net">website</a>]
+        [<a href="https://github.com/substack">github</a>]
+        [<a href="https://twitter.com/#!/substack">twitter</a>]
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="content" id="contact">
+  <h1>contact</h1>
+  <form class="body" method="POST" action="/contact/comment">
+    <div>
+    Send email to
+    <a href="mailto:feedback@browserling.com"
+    class="big">feedback@browserling.com</a>
+    or use this form:
+    </div>
+    
+    <div class="from-email">
+      email:
+      <input type="text" name="email" class="email">
+      (optional)
+    </div>
+    <input type="hidden" name="tag" value="webapp">
+    <textarea name="comment"></textarea>
+    <div>
+      <input type="submit" value="comment">
+    </div>
+    
+    <div class="thanks"></div>
+    
+    <div>
+    We're on irc at irc.freenode.net/#stackvm.
+    </div>
+    
+  </form>
+  
+  <div class="error"></div>
+</div>
+
+<div class="content" id="video">
+  <h1>video</h1>
+  <div class="body">
+    <div class="links"></div>
+    
+    <div class="video">
+      <object width="576" height="447"> 
+        <param name="movie" value="//www.youtube.com/watch?v=7zjBzU0nIdQ?fs=1&amp;hl=en_US&amp;hd=1"></param> 
+        <param name="allowFullScreen" value="true"></param> 
+        <param name="allowscriptaccess" value="always"></param> 
+        <embed src="//www.youtube.com/v/7zjBzU0nIdQ?fs=1&amp;hl=en_US&amp;hd=1" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="576" height="447"></embed> 
+      </object>  
+    </div>
+    
+    <div class="video">
+      <object width="576" height="447"> 
+        <param name="movie" value="//www.youtube.com/v/nsCWiBMcJlk?fs=1&amp;hl=en_US&amp;hd=1"></param> 
+        <param name="allowFullScreen" value="true"></param> 
+        <param name="allowscriptaccess" value="always"></param> 
+        <embed src="//www.youtube.com/v/nsCWiBMcJlk?fs=1&amp;hl=en_US&amp;hd=1" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="576" height="447"></embed> 
+      </object>  
+    </div>
+  </div>
+</div>
+
+<a name="pricing"></a>
+<div id="pricing">
+  <h1>pricing</h1>
+  Click on a plan to learn more.
+  <div class="box">
+    <div class="plan free">
+      <div class="icon">
+        <img src="/images/newsite/plans/free.png" width="148" height="150">
+      </div>
+      <div class="desc">
+        <div class="price">
+          $<span class="amount">0</span> <span class="per">/ month</span>
+        </div>
+        <div class="title">
+          free plan
+        </div>
+        
+        Great for students, casual cross-browser testing, and product
+        evaluation.
+        
+        <div class="features">
+          5-minute sessions
+        </div>
+      </div>
+      <div class="more">
+        <ul>
+          <li>Use browserling for 5 minutes at a time as much as you like.</li>
+          <li>Sometimes you'll need to wait in a queue if the site is busy.</li>
+          <li>Includes 30 <a href="http://testling.com">testling</a> minutes per
+            month.</li>
+        </ul>
+        <div class="yours">You have this plan.</div>
+      </div>
+    </div>
+    <div class="plan developer">
+      <div class="icon">
+        <img src="/images/newsite/plans/developer.png" width="151" height="150">
+      </div>
+      <div class="desc">
+        <div class="price">
+          $<span class="amount">20</span> <span class="per">/ month</span>
+        </div>
+        <div class="title">
+          developer plan
+        </div>
+        
+        Perfect for designers, front-end developers, and freelancers who need to
+        check their work against all the browsers.
+        
+        <div class="features">
+          unlimited sessions,
+          ssh tunnels
+        </div>
+      </div>
+      
+      <div class="more">
+        <ul>
+          <li>Use browserling for as long as you need, as much as you like.</li>
+          <li>Includes 200 <a href="http://testling.com">testling</a> minutes per month</li>
+          <li>SSH tunnels to access localhost and intranet services</li>
+        </ul>
+        <div class="yours">You have this plan.</div>
+      </div>
+    </div>
+    <div class="plan dedicated">
+      <div class="icon">
+        <img src="/images/newsite/plans/dedicated.png" width="161" height="150">
+      </div>
+      <div class="desc">
+        <div class="price">
+          $<span class="amount">250</span>
+          <span class="per">/ month</span>
+        </div>
+        <div class="title">
+          dedicated plan
+        </div>
+        
+        Great for testing browser plugins, file downloads, and
+        browser-to-desktop interaction on dedicated instances.
+        
+        <div class="features">
+          unlimited sessions,
+          ssh tunnels,
+          dedicated desktop instances
+        </div>
+      </div>
+      
+      <div class="more dedicated">
+        <ul>
+          <li>
+            <a href="http://msdn.microsoft.com/en-us/library/windows/desktop/aa383015(v=vs.85).aspx">Remote desktop</a>
+              access or use the browsers through our web interface
+          </li>
+          <li>Includes 200 <a href="http://testling.com">testling</a> minutes per month</li>
+          <li>SSH tunnels to access localhost and intranet services</li>
+        </ul>
+        
+        <div class="additional">
+            This plan contains our entire non-IE browser selection plus IE9.
+            Additional versions of IE require additional dedicated resources.
+        </div>
+        
+        <div>
+            <input type="checkbox" name="ie6">
+            Native IE6 desktop (add $125)
+        </div>
+        <div>
+            <input type="checkbox" name="ie7">
+            Native IE7 desktop (add $125)
+        </div>
+        <div>
+            <input type="checkbox" name="ie8">
+            Native IE8 desktop (add $125)
+        </div>
+        
+        <div class="yours">You have this plan.</div>
+      </div>
+    </div>
+    
+    <form id="purchase" method="POST" class="cc">
+      <div class="plan-name">___ plan</div>
+      <input type="hidden" name="amount" value="">
+      <input type="hidden" name="plan" value="">
+      <input type="hidden" name="extras" value="">
+      
+      <div>full name</div>
+      <div>
+        <input type="text" size="30" autocomplete="off" name="name">
+      </div>
+      
+      <div>card number</div>
+      <div>
+        <input type="text" size="30" autocomplete="off" name="number">
+      </div>
+      
+      <div>cvc</div>
+      <div>
+        <input type="text" size="4" autocomplete="off" name="cvc">
+      </div>
+      
+      <div>expiration (mm/yyyy)</div>
+      <div>
+        <input type="text" size="2" name="expiry-month"/>
+        <span> / </span>
+        <input type="text" size="4" name="expiry-year"/>
+      </div>
+      
+      <div>
+        <input type="submit" value="purchase" class="purchase button">
+        <div class="busy">
+            Processing your transaction.
+            Please be patient and don't re-submit!
+        </div>
+      </div>
+      <div>
+        We use <a href="https://stripe.com/">stripe</a> for billing.
+        We don't store your card number anywhere ourselves.
+      </div>
+      <div class="error"></div>
+    </form>
+    
+    <div id="payment-success">
+        Payment success! Thanks for using browserling!
+    </div>
+    
+    <input class="buy" type="button">
+    <div class="back">
+      <a href="#">back</a>
+    </div>
+  </div>
+  
+  <div id="special">
+    Need a dedicated cluster for your whole organization?
+    <a href="#/contact">Contact us</a> and we can set something up.
+  </div>
+</div>
+
+<div id="footer">
+  <div class="item">
+    <div class="icon">
+      <a href="#/about"><img src="/images/newsite/about_us.png" alt="about us"></a>
+    </div>
+    <div class="caption">
+      <a href="#/about">about us</a>
+    </div>
+  </div>
+  
+  <div class="item">
+    <div class="icon">
+      <a href="#/contact"><img src="/images/newsite/contact.png" alt="contact"></a>
+    </div>
+    <div class="caption">
+      <a href="#/contact">contact</a>
+    </div>
+  </div>
+  
+  <div class="item">
+    <div class="icon">
+      <a href="http://twitter.com/#!/browserling"
+      ><img src="/images/newsite/twitter.png" alt="twitter"></a>
+    </div>
+    <div class="caption">
+      <a href="http://twitter.com/#!/browserling">follow</a>
+    </div>
+  </div>
+  
+  <div class="item">
+    <div class="icon">
+      <a href="#/video"><img src="/images/newsite/video.png" alt="video"></a>
+    </div>
+    <div class="caption">
+      <a href="#/video">video</a>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

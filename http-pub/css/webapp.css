@@ -1,0 +1,910 @@
+body {
+    background-color: rgb(243,248,252);
+    margin: 0px;
+    font-family: Ubuntu, Helvetica, sans-serif;
+    background-image: url(/images/newsite/clouds.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    color: rgb(40,50,90);
+}
+
+h1 {
+    font-size: 32px;
+    text-align: center;
+}
+
+a img {
+    border-width: 0px;
+}
+
+.big {
+    color: rgb(180,255,100);
+    font-size: 20px;
+}
+
+#account-bar {
+    position: absolute;
+    background-color: rgb(243,248,252);
+    top: 0px;
+    right: 0px;
+    width: 400px;
+    text-align: center;
+    
+    padding: 5px;
+    padding-bottom: 15px;
+    border-bottom-left-radius: 20px;
+}
+
+#account-bar .links a {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+#account-bar .links .selected {
+    background-color: rgb(203,219,250);
+    padding-bottom: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+#account-bar form {
+    display: none;
+    height: 220px;
+    padding-top: 10px;
+    margin-top: 10px;
+    margin-bottom: -10px;
+    font-size: 12px;
+    background-color: rgb(203,219,250);
+    border-radius: 20px;
+}
+
+#account-bar form input {
+    margin-bottom: 5px;
+    text-align: center;
+    width: 200px;
+    border-radius: 7px;
+    padding: 3px;
+}
+
+#account-bar form input[type="submit"] {
+    margin-top: 10px;
+    background-color: rgb(16,163,16);
+    color: white;
+    font-weight: bold;
+    border-color: rgb(30,181,30);
+}
+
+#account-bar form#sign-in input[type="submit"] {
+    color: transparent;
+    background-color: transparent;
+    background-image: url(/images/newsite/sign_in.png);
+    width: 201px;
+    height: 50px;
+    border-width: 0px;
+}
+
+#account-bar form#sign-in .forget {
+    margin-left: 5px;
+}
+
+#account-bar form#sign-in input[type="submit"]:active,
+#account-bar form#sign-in input[type="submit"].pressed {
+    background-image: url(/images/newsite/sign_in_pressed.png);
+}
+
+#account-bar form#create input[type="submit"] {
+    color: transparent;
+    background-color: transparent;
+    background-image: url(/images/newsite/create.png);
+    width: 201px;
+    height: 50px;
+    border-width: 0px;
+}
+
+#account-bar form#create input[type="submit"]:active,
+#account-bar form#create input[type="submit"].pressed {
+    background-image: url(/images/newsite/create_pressed.png);
+}
+
+#account-bar .close {
+    position: absolute;
+    right: 10px;
+    
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    color: rgb(120,154,179);
+    cursor: pointer;
+    
+    font-weight: bold;
+    border-radius: 10px;
+    border-color: rgb(120,154,179);
+    border-width: 2px;
+    border-style: solid;
+}
+
+#account-bar .authbar {
+    display: none;
+}
+
+#account-bar .error {
+    display: none;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 5px;
+    background-color: rgb(189,64,49);
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+#account-bar .notify {
+    display: none;
+    background-color: rgb(220,200,30);
+    color: black;
+    margin-top: 1em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+#top {
+    margin: auto;
+    padding-top: 10px;
+    padding-bottom: 0px;
+    text-align: center;
+}
+
+#top .logo {
+    cursor: pointer;
+}
+
+#top .hook {
+    font-size: 32px;
+    color: rgb(40,50,90);
+}
+
+.browser-form {
+    margin: auto;
+    margin-bottom: 10px;
+    
+    text-align: center;
+    width: 570px;
+    height: 344px;
+    padding: 15px;
+    
+    background-image: url(/images/newsite/form.png);
+}
+
+.browser-form .uri {
+    width: 550px;
+    height: 56px;
+    padding-left: 15px;
+    font-size: 20px;
+    border-width: 0px;
+    background-image: url(/images/newsite/uri.png);
+    background-color: transparent;
+    color: black;
+    margin-bottom: 5px;
+}
+
+.browser-form.busy .uri {
+    background-image: url(/images/newsite/uri_busy.gif);
+}
+
+.browser-form .run {
+    cursor: pointer;
+    width: 200px;
+    height: 51px;
+    
+    background-image: url(/images/newsite/run.png);
+    background-color: transparent;
+    
+    border-width: 0px;
+    border-radius: 10px;
+}
+
+.browser-form .run.pressed {
+    background-image: url(/images/newsite/run_pressed.png);
+}
+
+.browser-form .run-bar {
+    margin-top: -10px;
+    position: relative;
+    top: 0px;
+    left: 0px;
+}
+
+.browser-form .run-bar div {
+    display: inline-block;
+    position: absolute;
+    right: 20px;
+    height: 41px;
+    font-size: 32px;
+}
+
+.browser-form .run-bar div a:visited,
+.browser-form .run-bar div a:link {
+    color: rgb(240,248,252);
+}
+
+.browser-form .versions {
+    margin: auto;
+    width: 575px;
+    height: 125px;
+    padding-top: 10px;
+    overflow-y: auto;
+    margin-top: -5px;
+    margin-bottom: 15px;
+    text-align: center;
+    
+    background-image: url(/images/newsite/version_box.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.browser-form .versions .version {
+    text-align: center;
+    cursor: pointer;
+    background-color: transparent;
+    color: white;
+    background-image: url(/images/newsite/version_button.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 70px;
+    height: 30px;
+    font-family: Ubuntu, Helvetica, sans-serif;
+    font-size: 20px;
+    
+    border-width: 0px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 5px;
+}
+
+.browser-form .versions .version.excluded {
+    background-image: url(/images/newsite/version_button_disabled.png);
+}
+
+.browser-form .versions .unlock-message {
+    width: 450px;
+    margin: auto;
+    background-color: rgb(210,200,230);
+    border-radius: 15px;
+    padding: 15px;
+}
+
+.browser-form .versions .version.active {
+    background-image: url(/images/newsite/version_button_active.png);
+    color: black;
+}
+
+.browsers {
+    margin-bottom: 10px;
+}
+
+.browsers .browser {
+    cursor: pointer;
+    display: inline-block;
+    width: 90px;
+    height: 90px;
+    text-align: center;
+    background-color: transparent;
+    background-image: url(/images/newsite/browser_button.png);
+}
+
+.browsers .browser.active {
+    background-image: url(/images/newsite/browser_button_active.png);
+}
+
+.browsers .browser input {
+    cursor: pointer;
+    border-width: 0px;
+    width: 90px;
+    height: 90px;
+    background-color: transparent;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.browsers .browser .explorer {
+    background-image: url(/images/newsite/explorer.png);
+}
+
+.browsers .browser .firefox {
+    background-image: url(/images/newsite/firefox.png);
+}
+
+.browsers .browser .chrome {
+    background-image: url(/images/newsite/chrome.png);
+}
+
+.browsers .browser .safari {
+    background-image: url(/images/newsite/safari.png);
+}
+
+.browsers .browser .opera {
+    background-image: url(/images/newsite/opera.png);
+}
+
+.topic {
+    width: 700px;
+    height: 250px;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    background-color: transparent;
+    background-image: url(/images/newsite/topic_box.png);
+    background-size: 100% 100%;
+    padding: 20px;
+    
+    display: table;
+}
+
+.topic li {
+    margin-bottom: 15px;
+}
+
+.topic div {
+    margin-top: 30px;
+}
+
+.topic ul {
+    margin-top: 30px;
+    margin-left: -10px;
+}
+
+.topic img {
+    width: 320px;
+    border-radius: 35px;
+}
+
+.topic img.left {
+    float: left;
+    margin-right: 35px;
+}
+
+.topic img.right {
+    float: right;
+    margin-left: 20px;
+}
+
+#footer {
+    text-align: center;
+    background-image: url(/images/newsite/bottom_clouds.png);
+    background-size: 100% 360px;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    min-height: 360px;
+}
+
+#footer .bottom {
+    background-color: rgb(115,119,132);
+}
+
+#footer .item {
+    display: inline-block;
+    width: 150px;
+    margin-top: 130px;
+    
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+
+}
+
+#footer .item .icon {
+    width: 110px;
+    height: 120px;
+}
+
+#footer .item .caption {
+    text-align: center;
+    width: 110px;
+    height: 20px;
+}
+
+#footer .item .caption a:link {
+    color: white;
+}
+
+#footer .item .caption a:visited {
+    color: rgb(200,220,240);
+}
+
+#pricing {
+    position: relative;
+    text-align: center;
+    width: 600px;
+    margin: auto;
+}
+
+#pricing h1 {
+    margin-bottom: 5px;
+}
+
+#pricing .box {
+    background-image: url(/images/newsite/pricing_form.png);
+    width: 570px;
+    height: 494px;
+    padding: 15px;
+    margin-top: 10px;
+}
+
+#pricing #special {
+    width: 450px;
+    margin: auto;
+    margin-top: 10px;
+    background-color: rgb(203,219,250);
+    border-radius: 20px;
+    padding: 20px;
+}
+
+#pricing .plan {
+    height: 150px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+    padding-left: 30px;
+    padding-right: 30px;
+    cursor: pointer;
+}
+
+#pricing .plan:hover {
+    background-color: rgb(130,100,150);
+    border-radius: 30px;
+}
+
+#pricing .plan .yours {
+    display: none;
+}
+
+#pricing .plan.using .yours {
+    display: block;
+    font-size: 20px;
+    color: rgb(255,255,0);
+}
+
+#pricing .plan.using {
+    background-color: rgb(90,110,130);
+    border-radius: 30px;
+}
+
+#pricing .back {
+    display: none;
+    font-size: 24px;
+    position: absolute;
+    right: 50px;
+    bottom: 140px;
+}
+
+#pricing .buy {
+    display: none;
+    position: absolute;
+    left: 200px;
+    bottom: 130px;
+    width: 201px;
+    height: 51px;
+    background-image: url(/images/newsite/buy.png);
+    background-color: transparent;
+    padding: 0px;
+    border-width: 0px;
+}
+
+#pricing .cc {
+    display: none;
+    padding: 15px;
+    border-radius: 25px;
+    background-color: rgb(240,248,252);
+    width: 300px;
+    margin: auto;
+    margin-top: 10px;
+}
+
+#pricing .cc input[type="text"] {
+    text-align: center;
+    border-radius: 10px;
+    padding: 3px;
+    border-style: solid;
+    border-color: rgb(30,50,120);
+}
+
+#pricing .cc div {
+    margin-bottom: 5px;
+}
+
+#pricing .cc .plan-name {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#pricing .buy.pressed:active,
+#pricing .buy.pressed {
+    background-image: url(/images/newsite/buy_pressed.png);
+}
+
+#pricing .buy.free {
+    background-image: url(/images/newsite/downgrade.png);
+}
+
+#pricing .buy.free.pressed:active,
+#pricing .buy.free.pressed {
+    background-image: url(/images/newsite/downgrade_pressed.png);
+}
+
+#pricing .cc .purchase {
+    width: 201px;
+    height: 51px;
+    background-image: url(/images/newsite/purchase.png);
+    background-color: transparent;
+    color: transparent;
+    padding: 0px;
+    border-width: 0px;
+    margin-top: 10px;
+}
+
+#pricing .cc .purchase.pressed:active,
+#pricing .cc .purchase.pressed {
+    background-image: url(/images/newsite/purchase_pressed.png);
+}
+
+#pricing .busy {
+    display: none;
+}
+
+#pricing .box a:link, #pricing .box a:visited {
+    color: rgb(215,245,255);
+}
+
+.plan .more {
+    display: none;
+    text-align: left;
+    position: absolute;
+    top: 240px;
+    left: 40px;
+    color: white;
+}
+
+.plan .more ul li {
+    margin-top: 7px;
+    margin-bottom: 7px;
+}
+
+.plan .more .additional {
+    margin-bottom: 10px;
+}
+
+.plan .icon {
+    float: left;
+}
+
+.plan .desc {
+    margin-left: 170px;
+    text-align: left;
+    color: white;
+}
+
+.plan .desc .price {
+    float: right;
+    color: white;
+    font-size: 20px;
+}
+
+.plan .desc .price .per {
+    font-size: 12px;
+}
+
+.plan .desc .title {
+    font-size: 24px;
+    color: rgb(255,255,0);
+}
+
+.plan .desc .features {
+    color: rgb(180,255,100);
+    margin-top: 10px;
+}
+
+#payment-success {
+    display: none;
+    width: 369;
+    height: 480;
+    background-image: url(/images/newsite/account_upgraded.png);
+    margin: auto;
+    margin-top: 10px;
+}
+
+#purchase .error {
+    font-weight: bold;
+    color: red;
+}
+
+#browser-error {
+    display: none;
+    width: 487px;
+    height: 88px;
+    padding-left: 110px;
+    padding-top: 20px;
+    margin: auto;
+    color: white;
+    font-weight: bold;
+    background-image: url(/images/newsite/error.png);
+    margin-bottom: 10px;
+}
+
+.content {
+    display: none;
+    margin-top: -10px;
+}
+
+#index.content {
+    display: block;
+    margin-top: 10px;
+}
+
+#about.content .body {
+    background-image: url(/images/newsite/pricing_form.png);
+    width: 570px;
+    height: 494px;
+    
+    margin: auto;
+    padding: 15px;
+    color: rgb(245,248,252);
+}
+
+#about.content .body a:link {
+    color: rgb(140,190,255);
+}
+
+#about.content .body a:visited {
+    color: rgb(190,140,255);
+}
+
+#about.content .meet {
+    text-align: center;
+    font-size: 20px;
+    margin-top: -20px;
+    margin-bottom: 10px;
+}
+
+#about.content .hacker {
+    height: 220px;
+}
+
+#about.content .hacker#krumins .portrait {
+    float: right;
+}
+#about.content .hacker#krumins {
+    padding-left: 25px;
+}
+
+#about.content .hacker#halliday .portrait {
+    float: left;
+    margin-right: 30px;
+}
+
+#about.content .hacker .title {
+    padding-top: 85px;
+    color: rgb(210,220,252);
+    font-size: 32px;
+}
+
+#contact.content .body {
+    margin: auto;
+    width: 570px;
+    height: 344px;
+    padding: 15px;
+    background-image: url(/images/newsite/form.png);
+    text-align: center;
+    color: rgb(245,248,252);
+}
+
+#contact.content .body textarea {
+    margin: auto;
+    margin-top: 15px;
+    width: 450px;
+    height: 150px;
+    border-radius: 15px;
+    border-width: 0px;
+    padding: 10px;
+}
+
+#contact.content .body input[type="text"] {
+    border-radius: 5px;
+    border-width: 0px;
+    padding: 3px;
+}
+
+#contact.content .body input[type="submit"] {
+    cursor: pointer;
+    width: 200px;
+    height: 51px;
+    
+    background-image: url(/images/newsite/comment.png);
+    background-color: transparent;
+    color: transparent;
+    margin-top: 10px;
+    
+    border-width: 0px;
+}
+
+#contact.content .error {
+    display: none;
+    width: 487px;
+    height: 88px;
+    padding-left: 110px;
+    padding-top: 20px;
+    margin: auto;
+    color: white;
+    font-weight: bold;
+    background-image: url(/images/newsite/error.png);
+    margin-top: 10px;
+}
+
+#contact.content .thanks {
+    display: none;
+    color: rgb(180,255,100);
+}
+
+#video.content .body {
+    background-image: url(/images/newsite/pricing_form.png);
+    background-size: 100% 100%;
+    width: 600px;
+    height: 494px;
+    padding: 15px;
+    
+    margin: auto;
+    text-align: center;
+}
+
+#video.content .body .links {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+#video.content .body .links a.selected {
+    padding: 5px;
+    border-radius: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#video.content .body .links a:link {
+    color: rgb(140,190,255);
+}
+
+#video.content .body .links a:visited {
+    color: rgb(190,140,255);
+}
+
+#video.content .body .links a.selected {
+    background-color: rgb(170,190,225);
+    color: rgb(30,50,120);
+}
+
+#video.content .body .video {
+    display: none;
+}
+
+#account.content .body {
+    background-image: url(/images/newsite/pricing_form.png);
+    background-size: 100% 100%;
+    width: 600px;
+    height: 400px;
+    padding: 15px;
+    color: white;
+    
+    margin: auto;
+    text-align: center;
+}
+
+#account.content .body .segment a:link {
+    color: rgb(252,180,202);
+}
+
+#account.content .body .segment a:visited {
+    color: rgb(202,180,252);
+}
+
+#account.content .plan {
+    font-size: 20px;
+    color: rgb(180,255,100);
+}
+
+#account.content .tabs {
+    margin: auto;
+    margin-bottom: 10px;
+    margin-top: 5px;
+    
+    border-radius: 15px;
+    background-color: rgb(104,108,123);
+    width: 500px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#account.content .tabs a {
+    border-radius: 5px;
+    padding: 5px;
+    margin-left: 20px;
+    margin-right: 20px;
+    background-color: rgb(142,146,157);
+    color: white;
+}
+
+#account.content .tabs a.active {
+    background-color: rgb(191,193,198);
+    color: rgb(64,78,164);
+}
+
+#account.content #account-info img.plan {
+    float: left;
+    margin-right: 20px;
+}
+
+#account.content #account-info .segment div {
+    margin-bottom: 1em;
+}
+
+#account.content .segment {
+    width: 500px;
+    text-align: left;
+    margin: auto;
+    padding: 20px;
+}
+
+#account.content .form input[type="password"] {
+    border-radius: 5px;
+    border-width: 0px;
+    padding: 5px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#account.content .form .title {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+#account.content .form {
+    display: none;
+}
+
+#account.content .form.active {
+    display: block;
+}
+
+#pricing .cc a:link {
+    color: rgb(20,30,120);
+}
+
+#pricing .cc a:visited {
+    color: rgb(50,30,120);
+}
+
+#payment-success {
+    color: white;
+    font-size: 20px;
+}
+
+#purchase .busy {
+    display: none;
+    font-color: rgb(50,200,30);
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#account-password .success {
+    display: none;
+    margin-top: 10px;
+    color: rgb(140,220,80);
+}
+
+#account-password .error {
+    display: none;
+    margin-top: 10px;
+    color: red;
+}
