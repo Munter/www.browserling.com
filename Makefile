@@ -6,6 +6,10 @@ http-pub-production: http-pub/index.html $(DEPS)
 		--root http-pub \
 		--outroot $@ \
 		$<
+	echo 'ExpiresActive On' > $@/static/.htaccess
+	echo 'ExpiresDefault "access plus 1 year"' >>  $@/static/.htaccess
+	echo 'FileETag none' >>  $@/static/.htaccess
+	echo 'Header append Cache-Control "public"' >>  $@/static/.htaccess
 
 PHONY: clean
 
