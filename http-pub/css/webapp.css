@@ -181,7 +181,7 @@ a img {
     padding: 15px;
     
     background-image: url(/images/newsite/form.png);
-    -one-sprite-group: wide;
+    -one-sprite-group: form;
 }
 
 .browser-form .uri {
@@ -191,7 +191,7 @@ a img {
     font-size: 20px;
     border-width: 0px;
     background-image: url(/images/newsite/uri.png);
-    -one-sprite-group: wide;
+    -one-image-postprocess: pngquant(16) pngcrush(-rem alla) optipng;
     background-color: transparent;
     color: black;
     margin-bottom: 5px;
@@ -502,7 +502,7 @@ a img {
 
 #pricing .box {
     background-image: url(/images/newsite/pricing_form.png);
-    -one-sprite-group: wide;
+    -one-sprite-group: form;
     width: 570px;
     height: 494px;
     padding: 15px;
@@ -713,7 +713,7 @@ a img {
     color: white;
     font-weight: bold;
     background-image: url(/images/newsite/error.png);
-    -one-sprite-group: wide;
+    -one-image-postprocess: pngquant(32) pngcrush(-rem alla) optipng;
     margin-bottom: 10px;
 }
 
@@ -729,7 +729,7 @@ a img {
 
 #about.content .body {
     background-image: url(/images/newsite/pricing_form.png);
-    -one-sprite-group: wide;
+    -one-sprite-group: form;
     width: 570px;
     height: 494px;
     
@@ -781,7 +781,7 @@ a img {
     height: 344px;
     padding: 15px;
     background-image: url(/images/newsite/form.png);
-    -one-sprite-group: wide;
+    -one-sprite-group: form;
     text-align: center;
     color: rgb(245,248,252);
 }
@@ -826,7 +826,7 @@ a img {
     color: white;
     font-weight: bold;
     background-image: url(/images/newsite/error.png);
-    -one-sprite-group: wide;
+    -one-image-postprocess: pngquant(32) pngcrush(-rem alla) optipng;
     margin-top: 10px;
 }
 
@@ -837,6 +837,7 @@ a img {
 
 #video.content .body {
     background-image: url(/images/newsite/pricing_form.png);
+    -one-sprite-group: form;
     background-size: 100% 100%;
     width: 600px;
     height: 494px;
@@ -877,6 +878,7 @@ a img {
 
 #account.content .body {
     background-image: url(/images/newsite/pricing_form.png);
+    -one-sprite-group: form;
     background-size: 100% 100%;
     width: 600px;
     height: 400px;
