@@ -4,6 +4,7 @@ body {
     font-family: Ubuntu, Helvetica, sans-serif;
     background-image: url(/images/newsite/clouds.png);
     -one-image-postprocess: pngquant(32) pngcrush(-rem alla) optipng;
+    -one-image-inline: true;
     background-repeat: no-repeat;
     background-size: 100%;
     color: rgb(40,50,90);
@@ -324,6 +325,7 @@ a img {
     background-repeat: no-repeat;
     -one-sprite-selector-for-group: browser;
     -one-image-postprocess: pngquant(256) pngcrush(-rem alla) optipng;
+    -one-image-inline: true;
 }
 
 .browsers .browser .explorer {
@@ -368,6 +370,7 @@ a img {
     background-color: transparent;
     background-image: url(/images/newsite/topic_box.png);
     -one-image-postprocess: pngquant(32) pngcrush(-rem alla) optipng;
+    -one-image-inline: true;
     background-size: 100% 100%;
     padding: 20px;
     
@@ -406,6 +409,7 @@ a img {
     text-align: center;
     background-image: url(/images/newsite/bottom_clouds.png);
     -one-image-postprocess: pngquant(32) pngcrush(-rem alla) optipng;
+    -one-image-inline: true;
     background-size: 100% 360px;
     background-position: center bottom;
     background-repeat: no-repeat;
@@ -694,6 +698,7 @@ a img {
     height: 480;
     background-image: url(/images/newsite/account_upgraded.png);
     -one-image-postprocess: pngquant(128) pngcrush(-rem alla) optipng;
+    -one-image-inline: true;
     margin: auto;
     margin-top: 10px;
 }
