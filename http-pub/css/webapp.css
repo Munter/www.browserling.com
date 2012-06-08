@@ -81,7 +81,7 @@ a img {
     color: transparent;
     background-color: transparent;
     background-image: url(/images/newsite/sign_in.png);
-    -one-sprite-group: sprite;
+    -one-image-postprocess: pngquant(64) pngcrush(-rem alla) optipng;
     width: 201px;
     height: 50px;
     border-width: 0px;
@@ -94,14 +94,14 @@ a img {
 #account-bar form#sign-in input[type="submit"]:active,
 #account-bar form#sign-in input[type="submit"].pressed {
     background-image: url(/images/newsite/sign_in_pressed.png);
-    -one-sprite-group: sprite;
+    -one-image-postprocess: pngquant(64) pngcrush(-rem alla) optipng;
 }
 
 #account-bar form#create input[type="submit"] {
     color: transparent;
     background-color: transparent;
     background-image: url(/images/newsite/create.png);
-    -one-sprite-group: sprite;
+    -one-image-postprocess: pngquant(64) pngcrush(-rem alla) optipng;
     width: 201px;
     height: 50px;
     border-width: 0px;
@@ -110,7 +110,7 @@ a img {
 #account-bar form#create input[type="submit"]:active,
 #account-bar form#create input[type="submit"].pressed {
     background-image: url(/images/newsite/create_pressed.png);
-    -one-sprite-group: sprite;
+    -one-image-postprocess: pngquant(64) pngcrush(-rem alla) optipng;
 }
 
 #account-bar .close {
@@ -207,7 +207,7 @@ a img {
     height: 51px;
     
     background-image: url(/images/newsite/run.png);
-    -one-sprite-group: sprite;
+    -one-image-postprocess: pngquant(64) pngcrush(-rem alla) optipng;
     background-color: transparent;
     
     border-width: 0px;
@@ -216,7 +216,7 @@ a img {
 
 .browser-form .run.pressed {
     background-image: url(/images/newsite/run_pressed.png);
-    -one-sprite-group: sprite;
+    -one-image-postprocess: pngquant(64) pngcrush(-rem alla) optipng;
 }
 
 .browser-form .run-bar {
@@ -564,7 +564,7 @@ a img {
     width: 201px;
     height: 51px;
     background-image: url(/images/newsite/buy.png);
-    -one-sprite-group: sprite;
+    -one-image-postprocess: pngquant(64) pngcrush(-rem alla) optipng;
     background-color: transparent;
     padding: 0px;
     border-width: 0px;
@@ -600,25 +600,25 @@ a img {
 #pricing .buy.pressed:active,
 #pricing .buy.pressed {
     background-image: url(/images/newsite/buy_pressed.png);
-    -one-sprite-group: sprite;
+    -one-image-postprocess: pngquant(64) pngcrush(-rem alla) optipng;
 }
 
 #pricing .buy.free {
     background-image: url(/images/newsite/downgrade.png);
-    -one-sprite-group: sprite;
+    -one-image-postprocess: pngquant(64) pngcrush(-rem alla) optipng;
 }
 
 #pricing .buy.free.pressed:active,
 #pricing .buy.free.pressed {
     background-image: url(/images/newsite/downgrade_pressed.png);
-    -one-sprite-group: sprite;
+    -one-image-postprocess: pngquant(64) pngcrush(-rem alla) optipng;
 }
 
 #pricing .cc .purchase {
     width: 201px;
     height: 51px;
     background-image: url(/images/newsite/purchase.png);
-    -one-sprite-group: sprite;
+    -one-image-postprocess: pngquant(64) pngcrush(-rem alla) optipng;
     background-color: transparent;
     color: transparent;
     padding: 0px;
@@ -629,7 +629,7 @@ a img {
 #pricing .cc .purchase.pressed:active,
 #pricing .cc .purchase.pressed {
     background-image: url(/images/newsite/purchase_pressed.png);
-    -one-sprite-group: sprite;
+    -one-image-postprocess: pngquant(64) pngcrush(-rem alla) optipng;
 }
 
 #pricing .busy {
@@ -693,6 +693,7 @@ a img {
     width: 369;
     height: 480;
     background-image: url(/images/newsite/account_upgraded.png);
+    -one-image-postprocess: pngquant(64) pngcrush(-rem alla) optipng;
     margin: auto;
     margin-top: 10px;
 }
@@ -807,7 +808,7 @@ a img {
     height: 51px;
     
     background-image: url(/images/newsite/comment.png);
-    -one-sprite-group: sprite;
+    -one-image-postprocess: pngquant(64) pngcrush(-rem alla) optipng;
     background-color: transparent;
     color: transparent;
     margin-top: 10px;
