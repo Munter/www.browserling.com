@@ -261,6 +261,7 @@ a img {
     background-color: transparent;
     color: white;
     background-image: url(/images/newsite/version_button.png);
+    -one-image-postprocess: pngquant(32) pngcrush(-rem alla) optipng;
     background-repeat: no-repeat;
     background-position: center center;
     width: 70px;
