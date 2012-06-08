@@ -290,7 +290,7 @@ a img {
 
 .browser-form .versions .version.active {
     background-image: url(/images/newsite/version_button_active.png);
-    -one-sprite-group: sprite;
+    -one-image-postprocess: pngquant(32) pngcrush(-rem alla) optipng;
     color: black;
 }
 
