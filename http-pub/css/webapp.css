@@ -277,7 +277,7 @@ a img {
 
 .browser-form .versions .version.excluded {
     background-image: url(/images/newsite/version_button_disabled.png);
-    -one-sprite-group: sprite;
+    -one-image-postprocess: pngquant(32) pngcrush(-rem alla) optipng;
 }
 
 .browser-form .versions .unlock-message {
