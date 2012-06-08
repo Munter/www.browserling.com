@@ -3,6 +3,7 @@ body {
     margin: 0px;
     font-family: Ubuntu, Helvetica, sans-serif;
     background-image: url(/images/newsite/clouds.png);
+    -one-image-postprocess: pngquant(32) pngcrush(-rem alla) optipng;
     background-repeat: no-repeat;
     background-size: 100%;
     color: rgb(40,50,90);
