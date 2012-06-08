@@ -180,9 +180,6 @@ a img {
     width: 570px;
     height: 344px;
     padding: 15px;
-    
-    background-image: url(/images/newsite/form.png);
-    -one-sprite-group: form;
 }
 
 .browser-form .uri {
@@ -505,8 +502,6 @@ a img {
 }
 
 #pricing .box {
-    background-image: url(/images/newsite/pricing_form.png);
-    -one-sprite-group: form;
     width: 570px;
     height: 494px;
     padding: 15px;
@@ -717,8 +712,6 @@ a img {
     margin: auto;
     color: white;
     font-weight: bold;
-    background-image: url(/images/newsite/error.png);
-    -one-image-postprocess: pngquant(32) pngcrush(-rem alla) optipng;
     margin-bottom: 10px;
 }
 
@@ -733,8 +726,6 @@ a img {
 }
 
 #about.content .body {
-    background-image: url(/images/newsite/pricing_form.png);
-    -one-sprite-group: form;
     width: 570px;
     height: 494px;
     
@@ -785,8 +776,6 @@ a img {
     width: 570px;
     height: 344px;
     padding: 15px;
-    background-image: url(/images/newsite/form.png);
-    -one-sprite-group: form;
     text-align: center;
     color: rgb(245,248,252);
 }
@@ -830,8 +819,6 @@ a img {
     margin: auto;
     color: white;
     font-weight: bold;
-    background-image: url(/images/newsite/error.png);
-    -one-image-postprocess: pngquant(32) pngcrush(-rem alla) optipng;
     margin-top: 10px;
 }
 
@@ -841,8 +828,6 @@ a img {
 }
 
 #video.content .body {
-    background-image: url(/images/newsite/pricing_form.png);
-    -one-sprite-group: form;
     background-size: 100% 100%;
     width: 600px;
     height: 494px;
@@ -882,8 +867,6 @@ a img {
 }
 
 #account.content .body {
-    background-image: url(/images/newsite/pricing_form.png);
-    -one-sprite-group: form;
     background-size: 100% 100%;
     width: 600px;
     height: 400px;
@@ -1000,4 +983,29 @@ a img {
     display: none;
     margin-top: 10px;
     color: red;
+}
+
+/* Hacks to make build system optimize better. See https://github.com/One-com/assetgraph-builder/issues/4 */
+#video.content .body,
+#account.content .body,
+#pricing .box,
+#about.content .body {
+    background-image: url(/images/newsite/pricing_form.png);
+    -one-image-postprocess: pngquant(32) pngcrush(-rem alla) optipng;
+    -one-image-inline: true;
+}
+
+.bowser-form .form,
+#contact.content .body {
+    background-image: url(/images/newsite/form.png);
+    -one-image-postprocess: pngquant(32) pngcrush(-rem alla) optipng;
+    -one-image-inline: true;
+}
+
+
+#browser-error,
+#contact.content .error {
+    background-image: url(/images/newsite/error.png);
+    -one-image-postprocess: pngquant(32) pngcrush(-rem alla) optipng;
+    -one-image-inline: true;
 }
