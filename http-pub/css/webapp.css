@@ -250,6 +250,7 @@ a img {
     text-align: center;
     
     background-image: url(/images/newsite/version_box.png);
+    -one-image-postprocess: pngquant(8) pngcrush(-rem alla) optipng;
     background-repeat: no-repeat;
     background-position: center;
 }
