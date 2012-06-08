@@ -301,9 +301,7 @@
   Click on a plan to learn more.
   <div class="box">
     <div class="plan free">
-      <div class="icon">
-        <img src="/images/newsite/plans/free.png" width="148" height="150">
-      </div>
+      <div class="icon"></div>
       <div class="desc">
         <div class="price">
           $<span class="amount">0</span> <span class="per">/ month</span>
@@ -330,9 +328,7 @@
       </div>
     </div>
     <div class="plan developer">
-      <div class="icon">
-        <img src="/images/newsite/plans/developer.png" width="151" height="150">
-      </div>
+      <div class="icon"></div>
       <div class="desc">
         <div class="price">
           $<span class="amount">20</span> <span class="per">/ month</span>
@@ -360,9 +356,7 @@
       </div>
     </div>
     <div class="plan dedicated">
-      <div class="icon">
-        <img src="/images/newsite/plans/dedicated.png" width="161" height="150">
-      </div>
+      <div class="icon"></div>
       <div class="desc">
         <div class="price">
           $<span class="amount">250</span>

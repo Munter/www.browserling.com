@@ -659,6 +659,27 @@ a img {
 
 .plan .icon {
     float: left;
+    height: 150px;
+    width: 161px;
+    background-repeat: no-repeat;
+}
+
+#pricing .free .icon {
+    background-image: url(../images/newsite/plans/free.png);
+    -one-image-postprocess: pngquant(64) pngcrush(-rem alla) optipng;
+    -one-image-inline: true;
+}
+
+#pricing .developer .icon {
+    background-image: url(../images/newsite/plans/developer.png);
+    -one-image-postprocess: pngquant(64) pngcrush(-rem alla) optipng;
+    -one-image-inline: true;
+}
+
+#pricing .dedicated .icon {
+    background-image: url(../images/newsite/plans/dedicated.png);
+    -one-image-postprocess: pngquant(64) pngcrush(-rem alla) optipng;
+    -one-image-inline: true;
 }
 
 .plan .desc {
