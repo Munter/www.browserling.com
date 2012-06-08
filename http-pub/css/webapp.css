@@ -306,12 +306,12 @@ a img {
     text-align: center;
     background-color: transparent;
     background-image: url(/images/newsite/browser_button.png);
-    -one-sprite-group: sprite;
+    -one-image-postprocess: pngquant(32) pngcrush(-rem alla) optipng;
 }
 
 .browsers .browser.active {
     background-image: url(/images/newsite/browser_button_active.png);
-    -one-sprite-group: sprite;
+    -one-image-postprocess: pngquant(32) pngcrush(-rem alla) optipng;
 }
 
 .browsers .browser input {
