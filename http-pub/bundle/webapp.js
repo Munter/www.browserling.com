@@ -511,7 +511,7 @@ function getBrowsers (exclude) {
         return elem;
     }
     
-    $.get('/browsers.json', function (browserList) {
+    $.get(one.getStaticUrl('browsers.json'), function (browserList) {
         browserList.forEach(function (b) {
             form.find('.' + b.name).mousedown(function () {
                 var versions = form.find('.versions');
@@ -551,7 +551,7 @@ $(document).ready(function () {
 });
 
 function checkWhoami () {
-    $.ajax({ url : '/account/whoami.json', dataType : 'json' })
+    $.ajax({ url : 'account/whoami.json', dataType : 'json' })
         .success(function (user) {
             if (user && user.email) authedAs(user.email);
             if (user) loadAccount();
