@@ -405,6 +405,7 @@ a img {
 #footer {
     text-align: center;
     background-image: url(/images/newsite/bottom_clouds.png);
+    -one-image-postprocess: pngquant(32) pngcrush(-rem alla) optipng;
     background-size: 100% 360px;
     background-position: center bottom;
     background-repeat: no-repeat;
