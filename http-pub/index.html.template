@@ -474,8 +474,8 @@
 
 <div id="footer">
   <div class="item">
-    <div class="icon">
-      <a href="#/about"><img src="/images/newsite/about_us.png" alt="about us"></a>
+    <div class="icon about">
+      <a href="#/about">about us</a>
     </div>
     <div class="caption">
       <a href="#/about">about us</a>
@@ -483,8 +483,8 @@
   </div>
   
   <div class="item">
-    <div class="icon">
-      <a href="#/contact"><img src="/images/newsite/contact.png" alt="contact"></a>
+    <div class="icon contact">
+      <a href="#/contact">contact</a>
     </div>
     <div class="caption">
       <a href="#/contact">contact</a>
@@ -492,9 +492,8 @@
   </div>
   
   <div class="item">
-    <div class="icon">
-      <a href="http://twitter.com/#!/browserling"
-      ><img src="/images/newsite/twitter.png" alt="twitter"></a>
+    <div class="icon twitter">
+      <a href="http://twitter.com/#!/browserling">follow</a>
     </div>
     <div class="caption">
       <a href="http://twitter.com/#!/browserling">follow</a>
@@ -502,8 +501,8 @@
   </div>
   
   <div class="item">
-    <div class="icon">
-      <a href="#/video"><img src="/images/newsite/video.png" alt="video"></a>
+    <div class="icon video">
+      <a href="#/video">video</a>
     </div>
     <div class="caption">
       <a href="#/video">video</a>

@@ -457,31 +457,13 @@ $(document).ready(function () {
         });
     });
     
-    $('#footer .item .icon a img').each(function () {
-        var src = {
-            up : $(this).attr('src'),
-            down : $(this).attr('src').replace(/\.png$/, '_pressed.png'),
-        };
-        
-        (function () {
-            var im = new Image();
-            im.src = src.down;
-        })();
-        
-        $(this)
-            .mousedown(function (ev) {
-                $(this).attr('src',
-                    $(this).attr('src') === src.up
-                    ? src.down : src.up
-                );
-            })
-            .mouseup(mouseout)
-            .mouseout(mouseout)
-        ;
-        
-        function mouseout () {
-            $(this).attr('src', src.up);
-        }
+    $('#footer').on('mousedown', '.icon a', function () {
+        $(this).addClass('pressed');
+        return false;
+    });
+
+    $('#footer').on('mouseup mouseout', '.icon a', function () {
+        $(this).removeClass('pressed');
     });
 });
 
