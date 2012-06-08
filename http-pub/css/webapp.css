@@ -693,7 +693,7 @@ a img {
     width: 369;
     height: 480;
     background-image: url(/images/newsite/account_upgraded.png);
-    -one-image-postprocess: pngquant(64) pngcrush(-rem alla) optipng;
+    -one-image-postprocess: pngquant(128) pngcrush(-rem alla) optipng;
     margin: auto;
     margin-top: 10px;
 }
