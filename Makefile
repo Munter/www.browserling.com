@@ -1,4 +1,4 @@
-DEPS:=$(shell find http-pub/ -type f -name "*.[js|css|png|gif|json|template]")
+DEPS:=$(shell find http-pub/ -type f -name "*.*")
 PATH:=./node_modules/.bin/:${PATH}
 
 http-pub/index.html: http-pub/index.html.template $(DEPS)
