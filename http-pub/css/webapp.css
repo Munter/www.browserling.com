@@ -319,6 +319,8 @@ a img {
     background-color: transparent;
     background-position: center center;
     background-repeat: no-repeat;
+    -one-sprite-selector-for-group: browser;
+    -one-image-postprocess: pngquant(256) pngcrush(-rem alla) optipng;
 }
 
 .browsers .browser .explorer {
