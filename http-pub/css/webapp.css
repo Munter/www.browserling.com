@@ -320,42 +320,31 @@ a img {
     background-color: transparent;
     background-position: center center;
     background-repeat: no-repeat;
-    -one-sprite-selector-for-group: browser;
-    -one-image-postprocess: pngquant(256) pngcrush(-rem alla) optipng;
-    -one-image-inline: true;
 }
 
 .browsers .browser .explorer {
     background-image: url(/images/newsite/explorer.png);
-    -one-sprite-group: browser;
-    -one-sprite-padding: 0 8 0 0;
-    background-position: 7px 5px;
+    -one-image-postprocess: pngquant(32) pngcrush(-rem alla) optipng;
 }
 
 .browsers .browser .firefox {
     background-image: url(/images/newsite/firefox.png);
-    -one-sprite-group: browser;
-    background-position: 0 5px;
+    -one-image-postprocess: pngquant(128) pngcrush(-rem alla) optipng;
 }
 
 .browsers .browser .chrome {
     background-image: url(/images/newsite/chrome.png);
-    -one-sprite-group: browser;
-    -one-sprite-padding: 0 6 0 6;
-    background-position: 6px 5px;
+    -one-image-postprocess: pngquant(128) pngcrush(-rem alla) optipng;
 }
 
 .browsers .browser .safari {
     background-image: url(/images/newsite/safari.png);
-    -one-sprite-group: browser;
-    -one-sprite-padding: 0 10 0 0;
-    background-position: 9px 5px;
+    -one-image-postprocess: pngquant(128) pngcrush(-rem alla) optipng;
 }
 
 .browsers .browser .opera {
     background-image: url(/images/newsite/opera.png);
-    -one-sprite-group: browser;
-    background-position: 8px 5px;
+    -one-image-postprocess: pngquant(64) pngcrush(-rem alla) optipng;
 }
 
 .topic {
