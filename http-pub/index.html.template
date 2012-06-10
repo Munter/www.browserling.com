@@ -505,51 +505,7 @@
   </div>
 </div>
 
-<script type="text/javascript">
-(function () {
-  var defer = (function (document, script) {
-    "use strict";
-    var urls = [],
-      firstScript = document.getElementsByTagName(script)[0];
-
-    return function (url, callback) {
-      var inc;
-
-      if (url && urls.indexOf(url) === -1) {
-        inc = document.createElement(script);
-        inc.async = true;
-        inc.src = url;
-        if (callback) {
-          inc.onload = function () {
-            if (!inc.onloadDone) {
-              inc.onloadDone = true;
-              callback();
-            }
-          };
-          inc.onreadystatechange = function () {
-            if (inc.readyState === "loaded" || inc.readyState === "complete") {
-              inc.onload();
-            }
-          };
-        }
-        firstScript.parentNode.insertBefore(inc, firstScript);
-      }
-    };
-  }(document, 'script'));
-
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-19793659-1']);
-  _gaq.push(['_trackPageview']);
-
-  defer(('https:' === document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js');
-
-  defer('https://js.stripe.com/v1/', function () {
-    defer(one.getStaticUrl('js/jquery.js'), function() {
-      defer(one.getStaticUrl('bundle/webapp.js'));
-    });
-  });
-}());
-</script>
+<script type="text/javascript" src="js/init.js"></script>
 
 </body>
 </html>
