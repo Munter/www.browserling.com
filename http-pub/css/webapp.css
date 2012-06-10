@@ -1005,7 +1005,7 @@ a img {
     -one-image-inline: true;
 }
 
-.bowser-form .form,
+.browser-form,
 #contact.content .body {
     background-image: url(/images/newsite/form.png);
     -one-image-postprocess: pngquant(32) pngcrush(-rem alla) optipng;
