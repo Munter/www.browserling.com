@@ -1,17 +1,23 @@
-DEPS:=$(shell find http-pub/ -type f -name "*.*")
+DEPS:=$(shell find http-pub/ -type f -name "*.*" | grep -v index.html)
 PATH:=./node_modules/.bin/:${PATH}
 
-http-pub-production: http-pub/index.html.template $(DEPS)
+production: http-pub-production/index.html
+
+development: http-pub/index.html
+
+PHONY: clean deploy
+
+http-pub-production/index.html: http-pub/index.html.template $(DEPS)
 	cp $< http-pub/index.html
 	buildProduction \
 		--root http-pub \
-		--outroot $@ \
+		--outroot $(@D) \
 		http-pub/index.html
-	cp -r -t $@ $(dir $<)account
-	echo 'ExpiresActive On' > $@/static/.htaccess
-	echo 'ExpiresDefault "access plus 1 year"' >>  $@/static/.htaccess
-	echo 'FileETag none' >>  $@/static/.htaccess
-	echo 'Header append Cache-Control "public"' >>  $@/static/.htaccess
+	cp -r -t $(@D) $(dir $<)account
+	echo 'ExpiresActive On' > $(@D)/static/.htaccess
+	echo 'ExpiresDefault "access plus 1 year"' >>  $(@D)/static/.htaccess
+	echo 'FileETag none' >>  $(@D)/static/.htaccess
+	echo 'Header append Cache-Control "public"' >>  $(@D)/static/.htaccess
 
 http-pub/index.html: http-pub/index.html.template $(DEPS)
 	buildDevelopment \
@@ -19,9 +25,7 @@ http-pub/index.html: http-pub/index.html.template $(DEPS)
 		--version `git describe --long --tags --always --dirty 2>/dev/null || echo unknown` \
 		$<
 
-PHONY: clean deploy
-
-deploy: http-pub-production
+deploy: clean production
 	scp -r http-pub-production/* munter@mntr.dk:mntr.dk/browserling/
 
 clean:
