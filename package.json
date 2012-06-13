@@ -4,6 +4,6 @@
   "description": "Experimental optimization repository",
   "homepage": "http://browserling.com/",
   "devDependencies": {
-    "assetgraph-builder": "latest"
+    "assetgraph-builder": ">=0.3.37"
   }
 }
