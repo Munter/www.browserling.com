@@ -12,6 +12,7 @@ http-pub-production/index.html: http-pub/index.html.template $(DEPS)
 	buildProduction \
 		--root http-pub \
 		--outroot $(@D) \
+		--optimizepngs \
 		http-pub/index.html
 	cp -r -t $(@D) $(dir $<)account
 	echo 'ExpiresActive On' > $(@D)/static/.htaccess

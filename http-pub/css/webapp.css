@@ -3,7 +3,7 @@ body {
     margin: 0px;
     font-family: Ubuntu, Helvetica, sans-serif;
     background-image: url(/images/newsite/clouds.png);
-    -one-image-postprocess: pngquant(32) pngcrush(-rem alla) optipng;
+    -one-image-postprocess: pngquant(32);
     -one-image-inline: true;
     background-repeat: no-repeat;
     background-size: 100%;
@@ -31,7 +31,7 @@ a img {
     right: 0px;
     width: 400px;
     text-align: center;
-    
+
     padding: 5px;
     padding-bottom: 15px;
     border-bottom-left-radius: 20px;
@@ -82,7 +82,7 @@ a img {
     color: transparent;
     background-color: transparent;
     background-image: url(/images/newsite/sign_in.png);
-    -one-image-postprocess: pngquant(64) pngcrush(-rem alla) optipng;
+    -one-image-postprocess: pngquant(64);
     width: 201px;
     height: 50px;
     border-width: 0px;
@@ -95,14 +95,14 @@ a img {
 #account-bar form#sign-in input[type="submit"]:active,
 #account-bar form#sign-in input[type="submit"].pressed {
     background-image: url(/images/newsite/sign_in_pressed.png);
-    -one-image-postprocess: pngquant(64) pngcrush(-rem alla) optipng;
+    -one-image-postprocess: pngquant(64);
 }
 
 #account-bar form#create input[type="submit"] {
     color: transparent;
     background-color: transparent;
     background-image: url(/images/newsite/create.png);
-    -one-image-postprocess: pngquant(64) pngcrush(-rem alla) optipng;
+    -one-image-postprocess: pngquant(64);
     width: 201px;
     height: 50px;
     border-width: 0px;
@@ -111,19 +111,19 @@ a img {
 #account-bar form#create input[type="submit"]:active,
 #account-bar form#create input[type="submit"].pressed {
     background-image: url(/images/newsite/create_pressed.png);
-    -one-image-postprocess: pngquant(64) pngcrush(-rem alla) optipng;
+    -one-image-postprocess: pngquant(64);
 }
 
 #account-bar .close {
     position: absolute;
     right: 10px;
-    
+
     width: 20px;
     height: 20px;
     background-color: white;
     color: rgb(120,154,179);
     cursor: pointer;
-    
+
     font-weight: bold;
     border-radius: 10px;
     border-color: rgb(120,154,179);
@@ -175,7 +175,7 @@ a img {
 .browser-form {
     margin: auto;
     margin-bottom: 10px;
-    
+
     text-align: center;
     width: 570px;
     height: 344px;
@@ -189,7 +189,7 @@ a img {
     font-size: 20px;
     border-width: 0px;
     background-image: url(/images/newsite/uri.png);
-    -one-image-postprocess: pngquant(16) pngcrush(-rem alla) optipng;
+    -one-image-postprocess: pngquant(16);
     background-color: transparent;
     color: black;
     margin-bottom: 5px;
@@ -203,18 +203,18 @@ a img {
     cursor: pointer;
     width: 200px;
     height: 51px;
-    
+
     background-image: url(/images/newsite/run.png);
-    -one-image-postprocess: pngquant(64) pngcrush(-rem alla) optipng;
+    -one-image-postprocess: pngquant(64);
     background-color: transparent;
-    
+
     border-width: 0px;
     border-radius: 10px;
 }
 
 .browser-form .run.pressed {
     background-image: url(/images/newsite/run_pressed.png);
-    -one-image-postprocess: pngquant(64) pngcrush(-rem alla) optipng;
+    -one-image-postprocess: pngquant(64);
 }
 
 .browser-form .run-bar {
@@ -246,9 +246,9 @@ a img {
     margin-top: -5px;
     margin-bottom: 15px;
     text-align: center;
-    
+
     background-image: url(/images/newsite/version_box.png);
-    -one-image-postprocess: pngquant(8) pngcrush(-rem alla) optipng;
+    -one-image-postprocess: pngquant(8);
     background-repeat: no-repeat;
     background-position: center;
 }
@@ -259,14 +259,14 @@ a img {
     background-color: transparent;
     color: white;
     background-image: url(/images/newsite/version_button.png);
-    -one-image-postprocess: pngquant(32) pngcrush(-rem alla) optipng;
+    -one-image-postprocess: pngquant(32);
     background-repeat: no-repeat;
     background-position: center center;
     width: 70px;
     height: 30px;
     font-family: Ubuntu, Helvetica, sans-serif;
     font-size: 20px;
-    
+
     border-width: 0px;
     margin-left: 10px;
     margin-right: 10px;
@@ -275,7 +275,7 @@ a img {
 
 .browser-form .versions .version.excluded {
     background-image: url(/images/newsite/version_button_disabled.png);
-    -one-image-postprocess: pngquant(32) pngcrush(-rem alla) optipng;
+    -one-image-postprocess: pngquant(32);
 }
 
 .browser-form .versions .unlock-message {
@@ -288,7 +288,7 @@ a img {
 
 .browser-form .versions .version.active {
     background-image: url(/images/newsite/version_button_active.png);
-    -one-image-postprocess: pngquant(32) pngcrush(-rem alla) optipng;
+    -one-image-postprocess: pngquant(32);
     color: black;
 }
 
@@ -304,12 +304,12 @@ a img {
     text-align: center;
     background-color: transparent;
     background-image: url(/images/newsite/browser_button.png);
-    -one-image-postprocess: pngquant(32) pngcrush(-rem alla) optipng;
+    -one-image-postprocess: pngquant(32);
 }
 
 .browsers .browser.active {
     background-image: url(/images/newsite/browser_button_active.png);
-    -one-image-postprocess: pngquant(32) pngcrush(-rem alla) optipng;
+    -one-image-postprocess: pngquant(32);
 }
 
 .browsers .browser input {
@@ -324,27 +324,27 @@ a img {
 
 .browsers .browser .explorer {
     background-image: url(/images/newsite/explorer.png);
-    -one-image-postprocess: pngquant(32) pngcrush(-rem alla) optipng;
+    -one-image-postprocess: pngquant(32);
 }
 
 .browsers .browser .firefox {
     background-image: url(/images/newsite/firefox.png);
-    -one-image-postprocess: pngquant(128) pngcrush(-rem alla) optipng;
+    -one-image-postprocess: pngquant(128);
 }
 
 .browsers .browser .chrome {
     background-image: url(/images/newsite/chrome.png);
-    -one-image-postprocess: pngquant(128) pngcrush(-rem alla) optipng;
+    -one-image-postprocess: pngquant(128);
 }
 
 .browsers .browser .safari {
     background-image: url(/images/newsite/safari.png);
-    -one-image-postprocess: pngquant(128) pngcrush(-rem alla) optipng;
+    -one-image-postprocess: pngquant(128);
 }
 
 .browsers .browser .opera {
     background-image: url(/images/newsite/opera.png);
-    -one-image-postprocess: pngquant(64) pngcrush(-rem alla) optipng;
+    -one-image-postprocess: pngquant(64);
 }
 
 .topic {
@@ -355,11 +355,11 @@ a img {
     margin-bottom: 10px;
     background-color: transparent;
     background-image: url(/images/newsite/topic_box.png);
-    -one-image-postprocess: pngquant(32) pngcrush(-rem alla) optipng;
+    -one-image-postprocess: pngquant(32);
     -one-image-inline: true;
     background-size: 100% 100%;
     padding: 20px;
-    
+
     display: table;
 }
 
@@ -394,7 +394,7 @@ a img {
 #footer {
     text-align: center;
     background-image: url(/images/newsite/bottom_clouds.png);
-    -one-image-postprocess: pngquant(32) pngcrush(-rem alla) optipng;
+    -one-image-postprocess: pngquant(32);
     -one-image-inline: true;
     background-size: 100% 360px;
     background-position: center bottom;
@@ -410,7 +410,7 @@ a img {
     display: inline-block;
     width: 150px;
     margin-top: 130px;
-    
+
     -webkit-user-select: none;
     -khtml-user-select: none;
     -moz-user-select: none;
@@ -430,39 +430,39 @@ a img {
 
 #footer .item .about a {
     background-image: url(../images/newsite/about_us.png);
-    -one-image-postprocess: pngquant(64) pngcrush(-rem alla) optipng;
+    -one-image-postprocess: pngquant(64);
 }
 #footer .item .about a.pressed {
     background-image: url(../images/newsite/about_us_pressed.png);
-    -one-image-postprocess: pngquant(64) pngcrush(-rem alla) optipng;
+    -one-image-postprocess: pngquant(64);
 }
 
 #footer .item .contact a {
     background-image: url(../images/newsite/contact.png);
-    -one-image-postprocess: pngquant(64) pngcrush(-rem alla) optipng;
+    -one-image-postprocess: pngquant(64);
 }
 #footer .item .contact a.pressed {
     background-image: url(../images/newsite/contact_pressed.png);
-    -one-image-postprocess: pngquant(64) pngcrush(-rem alla) optipng;
+    -one-image-postprocess: pngquant(64);
 }
 
 #footer .item .twitter a {
     width: 104px;
     background-image: url(../images/newsite/twitter.png);
-    -one-image-postprocess: pngquant(128) pngcrush(-rem alla) optipng;
+    -one-image-postprocess: pngquant(128);
 }
 #footer .item .twitter a.pressed {
     background-image: url(../images/newsite/twitter_pressed.png);
-    -one-image-postprocess: pngquant(128) pngcrush(-rem alla) optipng;
+    -one-image-postprocess: pngquant(128);
 }
 
 #footer .item .video a {
     background-image: url(../images/newsite/video.png);
-    -one-image-postprocess: pngquant(32) pngcrush(-rem alla) optipng;
+    -one-image-postprocess: pngquant(32);
 }
 #footer .item .video a.pressed {
     background-image: url(../images/newsite/video_pressed.png);
-    -one-image-postprocess: pngquant(32) pngcrush(-rem alla) optipng;
+    -one-image-postprocess: pngquant(32);
 }
 
 #footer .item .caption {
@@ -552,7 +552,7 @@ a img {
     width: 201px;
     height: 51px;
     background-image: url(/images/newsite/buy.png);
-    -one-image-postprocess: pngquant(64) pngcrush(-rem alla) optipng;
+    -one-image-postprocess: pngquant(64);
     background-color: transparent;
     padding: 0px;
     border-width: 0px;
@@ -588,25 +588,25 @@ a img {
 #pricing .buy.pressed:active,
 #pricing .buy.pressed {
     background-image: url(/images/newsite/buy_pressed.png);
-    -one-image-postprocess: pngquant(64) pngcrush(-rem alla) optipng;
+    -one-image-postprocess: pngquant(64);
 }
 
 #pricing .buy.free {
     background-image: url(/images/newsite/downgrade.png);
-    -one-image-postprocess: pngquant(64) pngcrush(-rem alla) optipng;
+    -one-image-postprocess: pngquant(64);
 }
 
 #pricing .buy.free.pressed:active,
 #pricing .buy.free.pressed {
     background-image: url(/images/newsite/downgrade_pressed.png);
-    -one-image-postprocess: pngquant(64) pngcrush(-rem alla) optipng;
+    -one-image-postprocess: pngquant(64);
 }
 
 #pricing .cc .purchase {
     width: 201px;
     height: 51px;
     background-image: url(/images/newsite/purchase.png);
-    -one-image-postprocess: pngquant(64) pngcrush(-rem alla) optipng;
+    -one-image-postprocess: pngquant(64);
     background-color: transparent;
     color: transparent;
     padding: 0px;
@@ -617,7 +617,7 @@ a img {
 #pricing .cc .purchase.pressed:active,
 #pricing .cc .purchase.pressed {
     background-image: url(/images/newsite/purchase_pressed.png);
-    -one-image-postprocess: pngquant(64) pngcrush(-rem alla) optipng;
+    -one-image-postprocess: pngquant(64);
 }
 
 #pricing .busy {
@@ -655,19 +655,19 @@ a img {
 
 #pricing .free .icon {
     background-image: url(../images/newsite/plans/free.png);
-    -one-image-postprocess: pngquant(64) pngcrush(-rem alla) optipng;
+    -one-image-postprocess: pngquant(64);
     -one-image-inline: true;
 }
 
 #pricing .developer .icon {
     background-image: url(../images/newsite/plans/developer.png);
-    -one-image-postprocess: pngquant(64) pngcrush(-rem alla) optipng;
+    -one-image-postprocess: pngquant(64);
     -one-image-inline: true;
 }
 
 #pricing .dedicated .icon {
     background-image: url(../images/newsite/plans/dedicated.png);
-    -one-image-postprocess: pngquant(64) pngcrush(-rem alla) optipng;
+    -one-image-postprocess: pngquant(64);
     -one-image-inline: true;
 }
 
@@ -702,7 +702,7 @@ a img {
     width: 369;
     height: 480;
     background-image: url(/images/newsite/account_upgraded.png);
-    -one-image-postprocess: pngquant(128) pngcrush(-rem alla) optipng;
+    -one-image-postprocess: pngquant(128);
     -one-image-inline: true;
     margin: auto;
     margin-top: 10px;
@@ -738,7 +738,7 @@ a img {
 #about.content .body {
     width: 570px;
     height: 494px;
-    
+
     margin: auto;
     padding: 15px;
     color: rgb(245,248,252);
@@ -810,13 +810,13 @@ a img {
     cursor: pointer;
     width: 200px;
     height: 51px;
-    
+
     background-image: url(/images/newsite/comment.png);
-    -one-image-postprocess: pngquant(64) pngcrush(-rem alla) optipng;
+    -one-image-postprocess: pngquant(64);
     background-color: transparent;
     color: transparent;
     margin-top: 10px;
-    
+
     border-width: 0px;
 }
 
@@ -842,7 +842,7 @@ a img {
     width: 600px;
     height: 494px;
     padding: 15px;
-    
+
     margin: auto;
     text-align: center;
 }
@@ -882,7 +882,7 @@ a img {
     height: 400px;
     padding: 15px;
     color: white;
-    
+
     margin: auto;
     text-align: center;
 }
@@ -904,7 +904,7 @@ a img {
     margin: auto;
     margin-bottom: 10px;
     margin-top: 5px;
-    
+
     border-radius: 15px;
     background-color: rgb(104,108,123);
     width: 500px;
@@ -1001,14 +1001,14 @@ a img {
 #pricing .box,
 #about.content .body {
     background-image: url(/images/newsite/pricing_form.png);
-    -one-image-postprocess: pngquant(32) pngcrush(-rem alla) optipng;
+    -one-image-postprocess: pngquant(32);
     -one-image-inline: true;
 }
 
 .browser-form,
 #contact.content .body {
     background-image: url(/images/newsite/form.png);
-    -one-image-postprocess: pngquant(32) pngcrush(-rem alla) optipng;
+    -one-image-postprocess: pngquant(32);
     -one-image-inline: true;
 }
 
@@ -1016,6 +1016,6 @@ a img {
 #browser-error,
 #contact.content .error {
     background-image: url(/images/newsite/error.png);
-    -one-image-postprocess: pngquant(32) pngcrush(-rem alla) optipng;
+    -one-image-postprocess: pngquant(32);
     -one-image-inline: true;
 }
