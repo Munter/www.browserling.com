@@ -4,7 +4,6 @@ body {
     font-family: Ubuntu, Helvetica, sans-serif;
     background-image: url(/images/newsite/clouds.png);
     -one-image-postprocess: pngquant(32);
-    -one-image-inline: true;
     background-repeat: no-repeat;
     background-size: 100%;
     color: rgb(40,50,90);
@@ -356,7 +355,6 @@ a img {
     background-color: transparent;
     background-image: url(/images/newsite/topic_box.png);
     -one-image-postprocess: pngquant(32);
-    -one-image-inline: true;
     background-size: 100% 100%;
     padding: 20px;
 
@@ -395,7 +393,6 @@ a img {
     text-align: center;
     background-image: url(/images/newsite/bottom_clouds.png);
     -one-image-postprocess: pngquant(32);
-    -one-image-inline: true;
     background-size: 100% 360px;
     background-position: center bottom;
     background-repeat: no-repeat;
@@ -656,19 +653,16 @@ a img {
 #pricing .free .icon {
     background-image: url(../images/newsite/plans/free.png);
     -one-image-postprocess: pngquant(64);
-    -one-image-inline: true;
 }
 
 #pricing .developer .icon {
     background-image: url(../images/newsite/plans/developer.png);
     -one-image-postprocess: pngquant(64);
-    -one-image-inline: true;
 }
 
 #pricing .dedicated .icon {
     background-image: url(../images/newsite/plans/dedicated.png);
     -one-image-postprocess: pngquant(64);
-    -one-image-inline: true;
 }
 
 .plan .desc {
@@ -703,7 +697,6 @@ a img {
     height: 480;
     background-image: url(/images/newsite/account_upgraded.png);
     -one-image-postprocess: pngquant(128);
-    -one-image-inline: true;
     margin: auto;
     margin-top: 10px;
 }
@@ -1002,14 +995,12 @@ a img {
 #about.content .body {
     background-image: url(/images/newsite/pricing_form.png);
     -one-image-postprocess: pngquant(32);
-    -one-image-inline: true;
 }
 
 .browser-form,
 #contact.content .body {
     background-image: url(/images/newsite/form.png);
     -one-image-postprocess: pngquant(32);
-    -one-image-inline: true;
 }
 
 
@@ -1017,5 +1008,4 @@ a img {
 #contact.content .error {
     background-image: url(/images/newsite/error.png);
     -one-image-postprocess: pngquant(32);
-    -one-image-inline: true;
 }

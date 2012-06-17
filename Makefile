@@ -13,6 +13,7 @@ http-pub-production/index.html: http-pub/index.html.template $(DEPS)
 		--root http-pub \
 		--outroot $(@D) \
 		--optimizepngs \
+		--inlinesize 32000 \
 		http-pub/index.html
 	cp -r -t $(@D) $(dir $<)account
 	echo 'ExpiresActive On' > $(@D)/static/.htaccess
